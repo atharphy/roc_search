@@ -31,7 +31,6 @@ def save_results_to_file(results, filename, show_original):
                 f.write(entry['line'] + '\n')
             for roc in entry['rocs']:
                 f.write(f"  {roc}\n")
-            f.write('\n')
     print(f"\n Results saved to '{filename}'")
 
 def get_input_lines():
@@ -84,7 +83,6 @@ def main():
                 print(entry['line'])
             for roc in entry['rocs']:
                 print(f"  {roc}")
-            print()
 
         if save_output:
             out_name = input("Enter output filename (e.g., 'results.txt'): ").strip()
